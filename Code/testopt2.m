@@ -9,11 +9,11 @@ y=dy*(0:N-1);
 x2=reshape(x2,numel(x2),1);
 y2=reshape(y2,numel(y2),1);
 eN2=ones(N^2,1);
-kb=1.0;         % 1/s, doubt on its value
-I0=1.0;   % micro A, doubt this to have micro or not
+kb=1.0;         
+I0=1.0;   
 w1=[0:N/2 -N/2+1:-1];
 w2=[0:N/2 -N/2+1:-1];
-ci=1.0;    %doubt on unit and value
+ci=1.0;    
 if coefs==1
     kon=10^(-0.5);    %e-0.5 (1./sqrt(10))1/s   kon*re^2 ~ D1 %correct reaction dominant
     koff=1.e-1;   % rn=0.5 \mu m
