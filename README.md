@@ -1,4 +1,4 @@
-# SciCode
+# Reaction-Diffusion-Equations-Krylov-subspace-spectral-methods
 
 This is the solution of PDEs for first-order photobleaching kinetics (Reaction-Diffusion Equations) using Krylov subspace spectral (KSS) methods written in Matlab. Please, cite both below papers. Feel free to contact me at sheikho.physics@gmail.com.
 
