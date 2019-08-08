@@ -17,19 +17,29 @@ This is the solution of PDEs for first-order photobleaching kinetics (Reaction-D
 Files for performance comparisons:
 
 kssmain - helper function called by testopt2
+
 testopt1 - optimized version of test, that performs only one time step
+
 testopt1N - same as testopt1, for Neumann boundary conditions
+
 testopt2 - optimized version of test, that performs time-stepping
+
 crank - Crank-Nicholson
+
 eulerforward - forward Euler
+
 rk4 - 4th-order
+
 methodwrap - used to run test cases using either crank, eulerforward or 
 rk4. Sample usage:
 
 [solntime,abserr,relerr]=methodwrap(@crank,N,nsteps,tf,coefs)
 
 methodwrapN - same as methodwrap, for Neumann boundary conditions
+
 refsolnN - same as refsoln, for Neumann boundary conditions
+
 mydct, mydct2, myidct, myidct2 - cosine transform functions for Neumann 
+
 boundary conditions
 
