@@ -9,7 +9,7 @@ u21=0.5.*((w1m.^2+w2m.^2).*(D1-D2)+(kon-koff))+0.5.*sqrt((w1m.^2+w2m.^2).^2.*(D1
 u22=0.5.*((w1m.^2+w2m.^2).*(D1-D2)+(kon-koff))-0.5.*sqrt((w1m.^2+w2m.^2).^2.*(D1-D2).^2+...
     (w1m.^2+w2m.^2).*(2.0.*(D1+D2).*(kon+koff)-4.0.*((D1.*koff)+(D2.*kon)))+(kon+koff).^2);
 cons=u11.*u22-u12.*u21;
-v11=(u22./cons);   % I'm not sure if I have to keep .*exp(1i*(w1(k).*x2+w2(j).*y2))
+v11=(u22./cons);   
 v21=(-u12./cons);
 v12=(-u21./cons);
 v22=(u11./cons);
@@ -21,7 +21,7 @@ for t=dt:dt:tf
     b2=reshape(B22,N,N);
     Tum=fft2(u2);  %Tu=\hat{u}
     Tbm=fft2(b2);   %  Tub=[Tu;Tb];
-    u2=reshape(u2,N^2,1);    %redundant, made it just to fix dimensions error
+    u2=reshape(u2,N^2,1);    
     b2=reshape(b2,N^2,1);
     Tum=reshape(Tum,N^2,1);
     Tbm=reshape(Tbm,N^2,1);
@@ -53,7 +53,7 @@ for t=dt:dt:tf
         u21.*(Rc1.*((u22).*Tpm+(-u12).*Tqm))+...
         u22.*(c0.*((-u21).*Tum+(u11).*Tbm))+...
         u22.*(c1.*((-u21).*Tpm+(u11).*Tqm));
-    Tv1=reshape(Tv1./cons,N,N); %w
+    Tv1=reshape(Tv1./cons,N,N); 
     Tv2=reshape(Tv2./cons,N,N);
     
     v1=ifft2(Tv1);
