@@ -7,11 +7,11 @@ y=dy*(0:N-1);
 x2=reshape(x2,numel(x2),1);
 y2=reshape(y2,numel(y2),1);
 eN2=ones(N^2,1);
-kb=1.0;         % 1/s, doubt on its value
-I0=1.0;   % micro A, doubt this to have micro or not
+kb=1.0;         
+I0=1.0;   
 w1=[0:N/2 -N/2+1:-1];
 w2=[0:N/2 -N/2+1:-1];
-ci=1.0;    %doubt on unit and value
+ci=1.0;   
 if coefs==1
     kon=10^(-0.5);    %e-0.5 (1./sqrt(10))1/s   kon*re^2 ~ D1 %correct reaction dominant
     koff=1.e-1;   % rn=0.5 \mu m
@@ -62,7 +62,7 @@ u21=0.5.*(w12m2.*(D1-D2)+(kon-koff))+0.5.*sqrt(w12m2.^2.*(D1-D2).^2+...
 u22=0.5.*(w12m2.*(D1-D2)+(kon-koff))-0.5.*sqrt(w12m2.^2.*(D1-D2).^2+...
     w12m2.*(2.0.*(D1+D2).*(kon+koff)-4.0.*((D1.*koff)+(D2.*kon)))+(kon+koff).^2);
 cons=koff*(u22-u21);
-v11=(u22./cons);   % I'm not sure if I have to keep .*exp(1i*(w1(k).*x2+w2(j).*y2))
+v11=(u22./cons);   
 v21=(-koff./cons);
 v12=(-u21./cons);
 v22=(koff./cons);
@@ -99,7 +99,7 @@ Tv1(1)=Tv1(1)+u11(1)*Rc0(1)*u22(1)*Tum1-u11(1)*Rc0(1)*u12(1)*Tbm1-...
     u12(1)*c0(1)*u21(1)*Tum1+u12(1)*c0(1)*u11(1)*Tbm1;
 Tv2(1)=Tv2(1)+u21(1)*Rc0(1)*u22(1)*Tum1-u21(1)*Rc0(1)*u12(1)*Tbm1-...
     u22(1)*c0(1)*u21(1)*Tum1+u22(1)*c0(1)*u11(1)*Tbm1;
-Tv1=reshape(Tv1./cons,N,N); %w
+Tv1=reshape(Tv1./cons,N,N);
 Tv2=reshape(Tv2./cons,N,N);
 
 v1=ifft2(Tv1);
