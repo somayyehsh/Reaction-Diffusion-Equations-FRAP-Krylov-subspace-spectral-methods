@@ -3,9 +3,15 @@
 This is the solution of PDEs for first-order photobleaching kinetics (Reaction-Diffusion Equations) using Krylov subspace spectral methods written in Matlab. Please, cite both below papers. Feel free to contact me for any additional information at sheikho.physics@gmail.com.
 
 
-	S. Sheikholeslami, James V. Lambers, “Modeling of first-order photobleaching kinetics using Krylov subspace spectral methods”, Computers and Mathematics with Applications, 2017, https://doi.org/10.1016/j.camwa.2017.10.019.
+	S. Sheikholeslami, James V. Lambers, “Modeling of first-order 
+	photobleaching kinetics using Krylov subspace spectral methods”, 
+	Computers and Mathematics with Applications, 2017, 
+	https://doi.org/10.1016/j.camwa.2017.10.019.
 
-	S. Sheikholeslami, James V. Lambers, Carley Walker, “Convergence Analysis of Krylov Subspace Spectral Methods for Reaction-Diffusion Equations”, Journal of Scientific Computing, 2018, http://doi.org/10.1007/s10915-018-0824-5.
+	S. Sheikholeslami, James V. Lambers, Carley Walker, 
+	“Convergence Analysis of Krylov Subspace Spectral Methods for 
+	Reaction-Diffusion Equations”, Journal of Scientific Computing, 2018, 
+	http://doi.org/10.1007/s10915-018-0824-5.
 
 
 Files for performance comparisons:
