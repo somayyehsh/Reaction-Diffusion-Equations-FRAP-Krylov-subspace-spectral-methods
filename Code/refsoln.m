@@ -99,18 +99,6 @@ exact2=exact64(numel(exact64)/2+1:numel(exact64));
 %ex=reshape(y,numel(y),1);
         save(a1,'exact1');
         save(a2,'exact2');
-% file is not found, so compute exact solution and save it
-% (actualy saving is done in myout.m)
-
-% exact1=reshape(exact1,64,64);
-% exact2=reshape(exact2,64,64);
-% % % A=makemat(coefs,N);
-% % % options=odeset('AbsTol',1e-14,'RelTol',1e-14,'Jacobian',@(t,y)fjac(t,y,coefs,A),'OutputFcn',@(t,y,flag)myout(t,y,flag,coefs,N));
-% % % y0=initdata(coefs,N);
-% % % oda15s(@(t,y)jacobian(t,y,coefs,A),[ 0 T ],y0,options);
-% at this point, solution has been computed and saved, so load from
-% file and return it
-%ty=load(fname);
 ty1=load(a1);
 ty2=load(a2);
 exact1=ty1.exact1;
